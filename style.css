@@ -1,6 +1,10 @@
-body {
+html {
     background: #CECECE;
     margin: 0% 15%;
+}
+
+body {
+    background: #FFFFFF;    
 }
 ul {
     background: #023436;
