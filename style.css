@@ -4,8 +4,10 @@ html {
 }
 
 body {
-    background: #FFFFFF;    
+    background: #FFFFFF; 
+    height: 2000px;
 }
+
 ul {
     background: #023436;
 }
@@ -15,9 +17,30 @@ ul li {
     margin: 0;
     padding: 0;
     float: left;
+    width: 160px;
+    height: 40px;
+    text-align: center;
+    line-height: 50px;
+    margin: 
 }
 
 a {
     text-decoration: none;
     display: inline-block;
+    color: white;
+    width: 150px;
+}
+
+#aboutId {
+    float: right;
+}
+
+#active {
+    background: #037971;
+}
+
+ul {
+    background: #023436;
+    height: 50px;
+    border: 1px solid black;
 }
