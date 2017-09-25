@@ -1,46 +1,233 @@
 html {
-    background: #CECECE;
-    margin: 0% 15%;
+    background: #FFFFFF;
+    margin: 0% 5%;
 }
 
 body {
     background: #FFFFFF; 
     height: 2000px;
+    display: flex;
+    flex-direction: column;
 }
 
-ul {
-    background: #023436;
+#active {
+    background: #003459;
+    color: aliceblue;
 }
 
 ul li {
     list-style: none;
-    margin: 0;
-    padding: 0;
-    float: left;
-    width: 160px;
-    height: 40px;
-    text-align: center;
-    line-height: 50px;
-    margin: 
 }
 
 a {
+    font-family: 'Oswald', sans-serif;
+}
+
+.mainArticle, .sectionOne {
+    display: flex;
+}
+
+.sectionOne div {
+    flex-direction: row;
+}
+
+/**************MAIN STYLE**************/
+
+.main-header, .nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-logo {
+    display: flex;
+    align-self: center;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.main-header {
+    padding-top: 1em;
+    justify-content: center;
+}
+.nav {
+    margin-top: 1em;
+    padding: 0;
+}
+
+.nav a {
+    display: block;
+    color: #797E83;
+    font-size: 1.125em;
+    font-weight: 300;
+    text-align: center;
+    padding: .4em;
+    border-bottom: 1px solid #EBECEC;
     text-decoration: none;
-    display: inline-block;
-    color: white;
-    width: 150px;
 }
 
-#aboutId {
-    float: right;
+.nav a:hover {
+    color: #0B0B0B;
+    border-bottom-color: #003459;
 }
 
-#active {
-    background: #037971;
+#active:hover {
+    color: #797E83;
 }
 
-ul {
-    background: #023436;
-    height: 50px;
-    border: 1px solid black;
+nav {
+    margin-bottom: 2em;
 }
+
+/*******************************
+
+        MEDIA QUERY 
+
+*******************************/
+
+/*FIRST BRACKPOINT*/
+/******NAVIGATION******/
+@media (min-width: 769px) {
+    .main-header {
+        height: 150px;
+        justify-content: center;
+        padding: 0;
+    }
+    
+    img {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .nav {
+        margin-top: 9em;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .nav a {
+        border-bottom-color: transparent;
+        width: 200px;
+    }
+    
+    nav {
+        margin-bottom: 4em;
+    }
+    
+    /******END NAVIGATION*******/
+    /******MAIN********/
+    
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border: 1px solid black;
+    }
+    
+    /********ARTICLE*********/
+    article {
+        border: 1px solid black;
+    }
+    /********END ARTICLE*******/
+    /*******ASIDE***********/
+    aside {
+        border: 1px solid black;
+    }
+    /*******END ASIDE*******/
+}
+
+/*SECOND BRACKPOINT*/
+
+@media (min-width: 1025px) {
+   
+    /******NAVIGATION******/
+    .main-header {
+        flex-direction: row;
+        padding: 0;
+        
+    }
+    
+    .side-logo {
+        margin: auto;
+    }
+    
+    .nav {
+        margin-top: 2em;
+        margin-bottom: 0;
+        align-self: center;
+    }
+    
+    .nav li {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    
+    .nav a {
+        display: block;
+        width: 150px;
+    }
+    
+    nav {
+        margin-bottom: 2em;
+    }
+    
+    /******END NAVIGATION*******/
+    /******MAIN********/
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 2em;
+    }
+    /******ARTICLES********/
+    article {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .sectionOne, .sectionTwo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-grow: .5;
+        width: 750px;
+        height: 350px;
+        align-items: flex-start;
+    }
+    
+    /******END ARTICLES*****/
+    /******CONTACT SECTION*****/
+    aside {
+        display: flex;
+        width: 350px;
+        justify-content: space-around;
+    }
+    .contact {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+        width: 300px;
+        align-items: center;
+    }
+    
+    .contact a {
+        text-decoration: none;
+        margin: 1em;
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
