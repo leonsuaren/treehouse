@@ -1,12 +1,13 @@
 html {
     background: #FFFFFF;
-    margin: 0% 5%;
+    margin: 0% 15%;
 }
 
 body {
     background: #FFFFFF; 
-    height: 2000px;
+/*    height: 2000px;*/
     display: flex;
+    min-height: 100vh;
     flex-direction: column;
 }
 
@@ -21,14 +22,6 @@ ul li {
 
 a {
     font-family: 'Oswald', sans-serif;
-}
-
-.mainArticle, .sectionOne {
-    display: flex;
-}
-
-.sectionOne div {
-    flex-direction: row;
 }
 
 /**************MAIN STYLE**************/
@@ -97,8 +90,8 @@ nav {
     }
     
     img {
-        width: 140px;
-        height: 140px;
+        width: 100px;
+        height: 100px;
     }
     
     .nav {
@@ -112,10 +105,6 @@ nav {
         width: 200px;
     }
     
-    nav {
-        margin-bottom: 4em;
-    }
-    
     /******END NAVIGATION*******/
     /******MAIN********/
     
@@ -123,17 +112,36 @@ nav {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        border: 1px solid black;
+        height: 550px;
     }
     
     /********ARTICLE*********/
-    article {
-        border: 1px solid black;
+    .mainArticle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .sectionTwo, .sectionOne {
+        display: flex;
+        flex-direction: row;
+        width: 650px;
+        justify-content: space-around;
     }
     /********END ARTICLE*******/
     /*******ASIDE***********/
     aside {
-        border: 1px solid black;
+        border: 2px solid #003459;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        padding-top: 1em;
+    }
+    
+    .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     /*******END ASIDE*******/
 }
@@ -141,81 +149,161 @@ nav {
 /*SECOND BRACKPOINT*/
 
 @media (min-width: 1025px) {
+    /******LENGUGES********/
+    
+    .lenguages {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .english, .espanol {
+        text-decoration: none;
+        font-size: .8em;
+        font-family: 'Oswald', sans-serif; 
+        flex-wrap: wrap;
+    }
+    
+    .espanol {
+        margin-left: 1em;
+        margin-right: 6em;
+    }
+    
+    .english {
+        margin-right: 1em;
+    }
    
-    /******NAVIGATION******/
+    /******NAVIGATION******/    
     .main-header {
         flex-direction: row;
+        justify-content: flex-start;
+        margin: 0;
         padding: 0;
-        
+        height: auto;
     }
     
     .side-logo {
-        margin: auto;
+        margin-right: 50px;
+        align-self: flex-start;
     }
     
     .nav {
+        display: flex;
         margin-top: 2em;
         margin-bottom: 0;
-        align-self: center;
+        align-self: flex-end;
     }
     
     .nav li {
-        margin-left: 1em;
-        margin-right: 1em;
+        justify-content: space-between;
     }
-    
+
     .nav a {
         display: block;
-        width: 150px;
-    }
-    
-    nav {
-        margin-bottom: 2em;
     }
     
     /******END NAVIGATION*******/
     /******MAIN********/
+    
     main {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        margin-top: 2em;
     }
     /******ARTICLES********/
     article {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    
+    article div {
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        margin: 2px;
+        width: 750px;
     }
     
     .sectionOne, .sectionTwo {
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-grow: .5;
         width: 750px;
-        height: 350px;
-        align-items: flex-start;
+    }
+    
+    .artOne, .artTwo {
+        display: flex;
+        border: 1px solid black;
+        
+    }
+    
+    .imgOne, .imgTwo {
+        width: 180px;
+        height: 180px;
     }
     
     /******END ARTICLES*****/
     /******CONTACT SECTION*****/
     aside {
         display: flex;
-        width: 350px;
         justify-content: space-around;
     }
     .contact {
         display: flex;
         flex-direction: column;
-        border: 1px solid black;
         width: 300px;
         align-items: center;
+        flex: 1;
     }
     
     .contact a {
         text-decoration: none;
         margin: 1em;
+    }
+    
+    /********COMPLEMENT********/
+    
+    .complement {
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+        justify-content: space-between;
+        border: 1px solid blue;
+    }
+    
+    .complementArticle, .complementInfo {
+        display: flex;
+        flex-direction: row;
+        height: 250px;
+    }
+    
+    .articleOne, .articleTwo, .articleThree, .articleFour {
+        display: flex;
+        border: 2px solid blue;
+        flex-direction: column;
+        flex-grow: 1;
+/*        flex-wrap: wrap;*/
+/*        justify-content: center;*/
+        margin: 2px;
+        padding: 5px;
+        
+    }
+    
+    .articleOne button {
+        display: flex;
+        margin-top: auto;
+        align-self: flex-end;
+    }
+    
+    .complementOne, .complementTwo {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        margin: 2px;
+        flex-grow: 1;
+/*        border: 2px solid blue;*/
     }
     
     
